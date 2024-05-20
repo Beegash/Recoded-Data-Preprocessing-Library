@@ -15,7 +15,7 @@ class CategoricalEncoder:
         Returns:
         pandas.DataFrame: The DataFrame with the categorical column one-hot encoded and the original column dropped.
         """
-        encoder = OneHotEncoder(sparse=False)
+        encoder = OneHotEncoder(sparse_output=False)
         encoded = encoder.fit_transform(df[[column]])
         encoded_df = pd.DataFrame(encoded, columns=encoder.get_feature_names_out([column]))
         return pd.concat([df, encoded_df], axis=1).drop(columns=[column])

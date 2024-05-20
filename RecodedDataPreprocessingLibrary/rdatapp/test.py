@@ -1,4 +1,4 @@
-import data_preprocessing_lib.__init__ as dpl
+import rdatapp.__init__ as dpl
 import pandas as pd
 
 df = pd.DataFrame({'A': [1, 2, None, 4, 5]})
@@ -10,13 +10,13 @@ if __name__ == '__main__':
     import unittest
     unittest.main()
 import pandas as pd
-from data_preprocessing_lib.categorical_encoder import CategoricalEncoder
-from data_preprocessing_lib.data_type_converter import DataTypeConverter
-from data_preprocessing_lib.datetime_handler import DateTimeHandler
-from data_preprocessing_lib.feature_engineer import FeatureEngineer
-from data_preprocessing_lib.outlier_handler import OutlierHandler
-from data_preprocessing_lib.scaler import Scaler
-from data_preprocessing_lib.text_cleaner import TextCleaner
+from rdatapp.categorical_encoder import CategoricalEncoder
+from rdatapp.data_type_converter import DataTypeConverter
+from rdatapp.datetime_handler import DateTimeHandler
+from rdatapp.feature_engineer import FeatureEngineer
+from rdatapp.outlier_handler import OutlierHandler
+from rdatapp.scaler import Scaler
+from rdatapp.text_cleaner import TextCleaner
 
 class TestDataPreprocessing(unittest.TestCase):
     def setUp(self):

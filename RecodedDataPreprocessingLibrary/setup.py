@@ -1,15 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='data_preprocessing_lib',
-    version='0.2a',
+    name='rdatapp',
+    version='0.5',
     packages=find_packages(),
     install_requires=[
         'pandas',
         'numpy',
         'scikit-learn',
-        'nltk'
-        're'
+        'nltk',
     ],
     description='A recoded data preprocessing library for handling various data cleaning and transformation tasks. The library includes classes for text cleaning, missing value imputation, one-hot encoding and more.',
     author='izzettin furkan özmen, ismail cifci',
