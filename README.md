@@ -63,7 +63,7 @@ df = CategoricalEncoder.one_hot_encode(df, 'Category')
 print(df)
 ```
 
-### Outlier Detection
+### Outlier Detection
 
 ```python
 import pandas as pd
