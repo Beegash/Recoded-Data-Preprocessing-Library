@@ -77,7 +77,6 @@ print(df)
 ### Scaling
 
 ```python
-Kodu kopyala
 import pandas as pd
 from rdatapp.scaler import Scaler
 
