@@ -156,7 +156,7 @@ print(df)
 
 ## License
 
-This project is not licensed. Feel free to use.
+This project is not licensed, feel free to use.
 
 ## Contributing
 
