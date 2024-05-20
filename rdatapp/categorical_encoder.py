@@ -7,13 +7,16 @@ class CategoricalEncoder:
     def one_hot_encode(df, column):
         """
         One-hot encodes a categorical column in a DataFrame.
+        
+        This method converts a categorical column into a new DataFrame with binary columns 
+        for each category and then concatenates it to the original DataFrame, dropping the original column.
 
         Parameters:
         df (pandas.DataFrame): The DataFrame containing the categorical column.
         column (str): The name of the categorical column to be one-hot encoded.
 
         Returns:
-        pandas.DataFrame: The DataFrame with the categorical column one-hot encoded and the original column dropped.
+        pandas.DataFrame: The DataFrame with the one-hot encoded column and the original column removed.
         """
         encoder = OneHotEncoder(sparse_output=False)
         encoded = encoder.fit_transform(df[[column]])
@@ -23,14 +26,18 @@ class CategoricalEncoder:
     @staticmethod
     def label_encode(df, column):
         """
-        Encodes the specified column in the given DataFrame using label encoding.
+        Label encodes a categorical column in a DataFrame.
+
+        This method converts each category in a column into a numeric label. This is useful 
+        for converting categorical data into a format suitable for machine learning algorithms 
+        that require numerical input.
 
         Parameters:
-        - df (pandas.DataFrame): The DataFrame containing the column to be encoded.
-        - column (str): The name of the column to be encoded.
+        df (pandas.DataFrame): The DataFrame containing the column to be label encoded.
+        column (str): The name of the column to be label encoded.
 
         Returns:
-        - df (pandas.DataFrame): The DataFrame with the encoded column.
+        pandas.DataFrame: The DataFrame with the label encoded column.
         """
         encoder = LabelEncoder()
         df[column] = encoder.fit_transform(df[column])

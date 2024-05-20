@@ -5,6 +5,10 @@ class OutlierHandler:
     def iqr_outlier_detection(df, column, threshold=1.5):
         """
         Perform outlier detection using the Interquartile Range (IQR) method.
+        
+        This method identifies and removes outliers from the specified column in the DataFrame 
+        based on the IQR method. Outliers are defined as values below Q1 - (IQR * threshold) 
+        or above Q3 + (IQR * threshold), where Q1 and Q3 are the first and third quartiles, respectively.
 
         Args:
             df (pandas.DataFrame): The input DataFrame.
